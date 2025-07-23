@@ -6,5 +6,6 @@
   "groupName": "All",
   "baseBranches": [
     "main"
-  ]
+  ],
+  "includeForks": true
 }
