@@ -5,8 +5,8 @@
   <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
     <img src="https://lucide.dev/lucide-logo-repo-dark.svg#gh-dark-mode-only" alt="Lucide - Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons." width="240">
   </a>
-  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
-    <img alt="Qwik Logo" width="240" src="https://raw.githubusercontent.com/QwikDev/qwik/main/.github/assets/qwik-logo.svg" />
+  <a href="https://github.com/qwikDev/qwik">
+    <img alt="Qwik Logo" width="240" src="https://raw.githubusercontent.com/QwikDev/qwik/main/packages/docs/public/logos/qwik.svg" />
   </a>
 </p>
 
