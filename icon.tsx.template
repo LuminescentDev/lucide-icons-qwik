@@ -1,11 +1,8 @@
-import { component$, Slot } from '@builder.io/qwik';
-
 import { IconProps } from '{{TYPES_REL_PATH}}';
 import BaseIcon from '{{BASE_ICON_REL_PATH}}';
 
-export default component$((props: IconProps) => {
+export default (props: IconProps) => {
   return <BaseIcon name="{{ICON_NAME}}" {...props}>
-    <Slot/>
     {{CONTENT}}
   </BaseIcon>;
-});
+};
