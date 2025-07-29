@@ -6,7 +6,7 @@ const iconPkg = JSON.parse(
 const frameworkPkgPath = './package.json';
 const frameworkPkg = JSON.parse(fs.readFileSync(frameworkPkgPath, 'utf8'));
 
-frameworkPkg.version = iconPkg.version;
+frameworkPkg.version = `${iconPkg.version}-0`;
 
 fs.writeFileSync(frameworkPkgPath, JSON.stringify(frameworkPkg, null, 2) + '\n');
-console.log(`Synced version to ${iconPkg.version}`);
+console.log(`Synced version to ${iconPkg.version}-0`);

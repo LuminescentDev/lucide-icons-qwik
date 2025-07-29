@@ -35,11 +35,19 @@ jobs:
       - name: Sync version with icon library
         run: pnpm run sync-version
 
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add package.json
+          git commit -m "chore: sync version with icon library"
+          git push
+
       - name: Build
         run: pnpm run build
 
       - name: Publish with np
         if: github.event_name == 'push'
-        run: pnpm exec np --no-interactive --yolo
+        run: pnpm exec np --no-interactive --yolo patch
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
