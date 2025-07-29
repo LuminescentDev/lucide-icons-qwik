@@ -46,8 +46,11 @@ jobs:
       - name: Build
         run: pnpm run build
 
+      - name: Set publishing config
+        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
       - name: Publish with np
         if: github.event_name == 'push'
         run: pnpm exec np --no-interactive --yolo patch
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
